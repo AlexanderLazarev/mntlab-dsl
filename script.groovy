@@ -57,6 +57,9 @@ job('Job_main') {
 
 for (int i = 1; i <= CJobs; i++) {
 	job('Job_child'+i) {
+		parameters {
+			choiceParam('BRANCH_NAME', branches)
+		}
 		steps {
 			copyArtifacts('Job_main') {
 				includePatterns('script.sh')
