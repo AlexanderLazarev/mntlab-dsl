@@ -67,7 +67,7 @@ for (int i = 1; i <= CJobs; i++) {
 					workspace()
 				}
 			}
-			shell('bash ./script.sh > output.txt && tar -czvf ${BRANCH_NAME}_dsl_script.tar.gz output.txt script.sh jobs.groovy')
+			shell('bash ./script.sh > output.txt && tar -czvf ${BRANCH_NAME}_dsl_script.tar.gz ./*')
 		}
 	}
 }
