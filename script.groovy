@@ -20,7 +20,7 @@ job('Job_main') {
 		github repo, '$BRANCH_NAME'
 	}
 	parameters {
-		choiceParam('BRANCH_NAME', ['alazarev (default)', 'master'], '')
+		choiceParam('BRANCH_NAME', ['alazarev', 'master'], '')
 		activeChoiceParam('BUILDS_TRIGGER') {
 			description('Available options')
 			filterable()
